@@ -199,7 +199,7 @@ fn counter_high(counter: u64) -> u32 {
 /// [`FromStr`]: https://doc.rust-lang.org/std/str/trait.FromStr.html
 /// [`std::parse`]: https://doc.rust-lang.org/std/primitive.str.html#method.parse
 #[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
-#[derive(Clone, Copy, Hash)]
+#[derive(Clone, Copy, Hash, PartialOrd, Ord)]
 pub struct Hash([u8; OUT_LEN]);
 
 impl Hash {
